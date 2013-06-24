@@ -125,7 +125,18 @@ $solidgrey: rgba(234, 234, 234, 1);
 		width: 27px;
 		height: 27px;
 		text-indent: -9999px;
-		background-color: #9bb7cb;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		background-image: url(../img/share-icons.png);
+
+		&.share {
+			background-position: 0 -27px;
+		}
+
+		&.github {
+			background-position: 0 -54px;
+		}
 
 	}
 }
