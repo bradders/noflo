@@ -3,20 +3,61 @@
 \*------------------------------------*/
 /**
 
+ * Fonts
  * Variables
+ * Mixins
  * Layout
  * Header
  * Promo
+ * Typography
+ * Page Title
  * Sidebar
  * Content
 
  */
 /*------------------------------------*\
+    $Fonts
+\*------------------------------------*/
+@font-face {
+  font-family: "proxima-nova-light";
+  src: url("../fonts/proximanova-light-webfont.eot");
+  src: local("?"), url("../fonts/proximanova-light-webfont.woff") format("woff"), url("../fonts/proximanova-light-webfont.ttf") format("truetype"), url("../fonts/proximanova-light-webfont.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "proxima-nova-regular";
+  src: url("../fonts/proximanova-regular-webfont.eot");
+  src: local("?"), url("../fonts/proximanova-regular-webfont.woff") format("woff"), url("../fonts/proximanova-regular-webfont.ttf") format("truetype"), url("../fonts/proximanova-regular-webfont.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "proxima-nova-bold";
+  src: url("../fonts/proximanova-bold-webfont.eot");
+  src: local("?"), url("../fonts/proximanova-bold-webfont.woff") format("woff"), url("../fonts/proximanova-bold-webfont.ttf") format("truetype"), url("../fonts/proximanova-bold-webfont.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "proxima-nova-semibold";
+  src: url("../fonts/proximanova-semibold-webfont.eot");
+  src: local("?"), url("../fonts/proximanova-semibold-webfont.woff") format("woff"), url("../fonts/proximanova-semibold-webfont.ttf") format("truetype"), url("../fonts/proximanova-semibold-webfont.svg#webfont") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*------------------------------------*\
     $Variables
 \*------------------------------------*/
-/* 16px */
-/* 18px: 1 / (16x18) = 1.125 */
-/* 24px: 1 / (16x24) = 1.5 */
+/* 14px: 1 / (18x14) = 0.777777 */
+/* 24px: 1 / (18x24) = 1.5 		*/
+/* 36px: 1 / (18x36) = 1.999998 */
+/* 48px: 1 / (18x48) = 2.666664 */
+/* 90px: 1 / (18x90) = 4.999995 */
+/* 140px: 1 / (18x140) = 7.77777 */
+/*------------------------------------*\
+    $Mixins
+\*------------------------------------*/
 /*------------------------------------*\
     $Layout
 \*------------------------------------*/
@@ -25,12 +66,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+body {
+  font-size: 1.125em;
+  font-family: "proxima-nova-light",sans-serif; }
+
 .container {
   margin: 0 auto; }
 
 .page {
-  margin-top: 75px;
-  min-height: 2000px; }
+  margin-top: 75px; }
 
 /*------------------------------------*\
     $Header
@@ -40,6 +84,8 @@
   display: inline-block;
   width: 50px;
   height: 75px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: 40px;
   text-indent: -9999px;
   background-color: transparent;
@@ -57,6 +103,9 @@
   width: 100%;
   height: 75px;
   background-color: rgba(234, 234, 234, 0.6); }
+  @media (max-width: 767px) {
+    .site-header {
+      padding: 0 20px; } }
   .site-header li {
     display: inline-block; }
 
@@ -66,9 +115,9 @@
   .main-nav .nav {
     margin-bottom: 0; }
   .main-nav a {
-    font-size: 1.125em;
     color: #000;
-    padding: 25px;
+    padding: 25px 0;
+    margin-right: 50px;
     height: 75px; }
     .main-nav a:hover {
       background-color: #eaeaea;
@@ -93,17 +142,25 @@
       background-position: 0 -27px; }
     .util-nav a.github {
       background-position: 0 -54px; }
+    .util-nav a:hover, .util-nav a:focus {
+      background-color: transparent; }
 
 /*------------------------------------*\
     $Promo
 \*------------------------------------*/
 .promo {
   padding-top: 230px;
-  height: 440px;
+  height: 670px;
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-image: url(../img/map-bg.png); }
+  @media (max-width: 767px) {
+    .promo {
+      height: 400px;
+      margin-left: -20px;
+      margin-right: -20px;
+      padding-top: 100px; } }
 
 .promo__title {
   width: 225px;
@@ -116,24 +173,123 @@
   background-image: url(../img/logo-white-large.png); }
 
 .promo__text {
-  font-size: 1.5em;
+  font-size: 1.33333em;
   color: #fff;
   text-align: center; }
 
 .promo__button {
   display: block;
   margin: 0 auto;
-  width: 230px;
-  font-size: 1.125em; }
+  padding: 15px 30px;
+  width: 230px; }
+
+/*------------------------------------*\
+    $Typography
+\*------------------------------------*/
+h1, .h1 {
+  line-height: 1.1;
+  font-weight: normal;
+  font-family: "proxima-nova-light", Arial, sans-serif;
+  font-size: 2.66666em; }
+
+h2, .h2 {
+  font-weight: normal;
+  font-family: "proxima-nova-semibold", Arial, sans-serif;
+  font-size: 1.33333em; }
+
+p {
+  line-height: 1.5; }
+
+a {
+  color: #8bb6e4; }
+  a:hover {
+    color: #8bb6e4;
+    text-decoration: underline; }
+
+/*------------------------------------*\
+    $Page Title
+\*------------------------------------*/
+.page-title {
+  padding: 5.0em 0;
+  min-height: 205px;
+  background-color: transparent;
+  background-position: 0 0;
+  background-image: url(../img/page-header-bg.gif);
+  background-repeat: no-repeat; }
+  @media (max-width: 767px) {
+    .page-title {
+      padding-right: 20px;
+      padding-left: 20px;
+      margin-right: -20px;
+      margin-left: -20px; } }
+
+.page-title__title {
+  float: left;
+  margin-top: 0;
+  color: white;
+  font-size: 2.0em; }
+
+.page-title__button {
+  float: right; }
+
+.download-button {
+  padding: 15px 30px;
+  font-family: "proxima-nova-bold", Arial, sans-serif; }
+
+/*------------------------------------*\
+    $Plain Title
+\*------------------------------------*/
+.plain-title {
+  overflow: hidden;
+  padding-top: 75px;
+  border-bottom: 1px solid #ededed; }
 
 /*------------------------------------*\
     $Sidebar
 \*------------------------------------*/
-.sidebar {
-  background-color: green; }
+.sidebar__nav {
+  margin: 0; }
+  .sidebar__nav li {
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ffffff;
+    list-style: none;
+    color: #000; }
+  .sidebar__nav a {
+    display: block;
+    padding: 20px;
+    color: #000;
+    font-size: 0.77778em;
+    font-family: "proxima-nova-regular", Arial, sans-serif;
+    border-left: 2px solid transparent; }
+    .sidebar__nav a:hover {
+      border-left: 2px solid #5396db;
+      text-decoration: none; }
 
 /*------------------------------------*\
     $Content
 \*------------------------------------*/
-.content {
-  background-color: yellow; }
+.main {
+  margin-top: 70px; }
+  @media (max-width: 767px) {
+    .main {
+      margin-top: 0; } }
+
+/*------------------------------------*\
+    $Code Examples
+\*------------------------------------*/
+pre {
+  border-left: 10px solid #28323e; }
+
+pre, code {
+  padding: 20px;
+  letter-spacing: 1px;
+  font-size: 0.77778em;
+  font-family: "Myriad Pro", Aperture, Arial, sans-serif;
+  border-radius: 4px 4px 4px;
+  background-color: #1d1d1f;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, #1f1f21), color-stop(0.5, transparent), to(transparent));
+  background-image: -moz-linear-gradient(#1f1f21 50%, transparent 50%, transparent);
+  background-image: -o-linear-gradient(#1f1f21 50%, transparent 50%, transparent);
+  background-image: linear-gradient(#1f1f21 50%, transparent 50%, transparent);
+  background-size: 40px 40px;
+  color: #fff; }

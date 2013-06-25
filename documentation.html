@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-	<title>Home | NoFlo</title>
+	<title>Documentation | NoFlo</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -46,29 +46,18 @@
 
 	<div class="row-fluid">
 
-		<div class="promo">
-			<h1 class="promo__title">NoFlo</h1>
-			<p class="promo__text">visual control flows for JavaScript</p>
-			<a href="./" class="btn btn-primary promo__button download-button">Download on GitHub</a>
+		<div class="page-title">
+			
+			<div class="container">
+				<h1 class="page-title__title">Documentation</h1>
+				<a href="./" class="btn btn-primary page-title__button download-button">Download on GitHub</a>
+			</div>
+
 		</div>
-		<!-- /.promo -->
+		<!-- /.page-title -->
 
 	</div>
 	<!-- /.row -->
-
-	<div class="row-fluid">
-
-		<div class="plain-title">
-			<div class="container">
-				<div class="span8 offset4">
-					<h1>About NoFlo</h1>
-				</div>
-			</div>
-		</div>
-		<!-- /.plain-title -->
-
-	</div>
-	<!-- /.row-fluid -->
 
 	<div class="row-fluid">
 
@@ -100,7 +89,23 @@
 				<!-- /.sidebar -->
 
 				<div class="content span8">
-					Content
+					
+					<h1 class="h1">NoFlo: Flow-based programming for Node.js</h1>
+
+					<h2 class="h2">Requirements and installing</h2>
+					<p>NoFlo is available <a href="./">via NPM</a>, so you can install it with:</p>
+					<pre><code>$ npm install -g noflo</code></pre>
+
+					<h3 class="h3">Installing from Git</h3>
+					<p>NoFlo requires a reasonably recent version of <a href="./">Node.js</a>, and some 
+						<a href="./">npm</a> packages. Ensure you have the grunt-cli package installed (grunt command should be available on command line) and NoFlo checked out from Git. Build NoFlo with:</p>
+					<pre><code>$ grunt build</code></pre>
+
+					<p>You can also build NoFlo only for the desired target platform with either <em>grunt build:nodejs</em> or <em>grunt build:browser</em>.</p>
+
+					<p>Then you can install everything needed by a simple:</p>
+					<pre><code>$ npm link</code></pre>
+
 				</div>
 				<!-- /.content -->
 
