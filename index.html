@@ -28,10 +28,36 @@
 				</nav>
 
 				<nav class="util-nav">
-					<ul class="nav">
-						<li><a href="./" class="email">Email</a></li>
-						<li><a href="./" class="share">Share</a></li>
-						<li><a href="./" class="github">Github</a></li>
+					<ul class="nav dropdown">
+						<li>
+							<a href="./" class="email" data-toggle="dropdown" data-target="#">Email</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Download </span>
+										<span class="dropdown__tally">104</span>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Star</span>
+										<span class="dropdown__tally">8201</span>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Fork</span>
+										<span class="dropdown__tally">321</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="./" class="share" data-toggle="dropdown" data-target="#">Share</a>
+						</li>
+						<li>
+							<a href="./" class="github" data-toggle="dropdown" data-target="#">Github</a>
+						</li>
 					</ul>
 				</nav>
 
@@ -78,29 +104,20 @@
 		
 				<div class="sidebar span4">
 					
-					<nav>
-						<ul class="sidebar__nav">
-							<li><a href="./">Requirements and installing</a></li>
-							<li><a href="./">Changes</a></li>
-							<li><a href="./">Using NoFlo</a></li>
-							<li><a href="./">Running the Examples</a></li>
-							<li><a href="./">Terminology</a></li>
-							<li><a href="./">Components</a></li>
-							<li><a href="./">The NoFlo Shell</a></li>
-							<li><a href="./">Designing NoFlo graphs with DrawFBP</a></li>
-							<li><a href="./">The web-based NoFlo monitor</a></li>
-							<li><a href="./">NoFlo graph file format</a></li>
-							<li><a href="./">Language for Flow-Based Programming</a></li>
-							<li><a href="./">Development</a></li>
-							<li><a href="./">Discussion</a></li>
-						</ul>
-					</nav>
-
 				</div>
 				<!-- /.sidebar -->
 
 				<div class="content span8">
-					Content
+					
+					<h3>Flow-Based Programming (FBP)</h3>
+					<p>NoFlo is a JavaScript implementation of <a href="./">Flow-Based Programming</a> 
+						(FBP). Separating the control flow of software from the actual software logic. Helping you organize large applications easier than traditional OOP paradigms, especially when importing and modifying large data sets.</p>
+
+					<h3>NoFlo and Node.js</h3>
+					<p>FBP itself is not a new idea: it comes from a term IBM used in the 70s to define the 
+						concepts of more manageable business workflows. NoFlo, however, refreshes these concepts 
+						and brings them to <a href="./">Node.js</a> applications.</p>
+
 				</div>
 				<!-- /.content -->
 
@@ -114,6 +131,13 @@
 	<!-- /.row -->
 
 </div>
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<!--<script src="https://raw.github.com/jkeyes/baseline/master/baseliner/baseliner.js"></script>
+<script>
+window.onload = function() {
+    baseliner = new Baseliner(15);
+}
+</script>-->
 </body>
 </html>
