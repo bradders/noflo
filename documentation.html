@@ -23,15 +23,42 @@
 				<nav class="main-nav">
 					<ul class="nav">
 						<li><a href="./">Demos</a></li>
-						<li><a href="./documentation.html" class="active">Documentation</a></li>
+						<li><a href="./documentation.html">Documentation</a></li>
+						<li><a href="./library.html">Library</a></li>
 					</ul>
 				</nav>
 
 				<nav class="util-nav">
-					<ul class="nav">
-						<li><a href="./" class="email">Email</a></li>
-						<li><a href="./" class="share">Share</a></li>
-						<li><a href="./" class="github">Github</a></li>
+					<ul class="nav dropdown">
+						<li>
+							<a href="./" class="email" data-toggle="dropdown" data-target="#">Email</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Download </span>
+										<span class="dropdown__tally">104</span>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Star</span>
+										<span class="dropdown__tally">8201</span>
+									</a>
+								</li>
+								<li>
+									<a href="./">
+										<span class="dropdown__action">Fork</span>
+										<span class="dropdown__tally">321</span>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="./" class="share" data-toggle="dropdown" data-target="#">Share</a>
+						</li>
+						<li>
+							<a href="./" class="github" data-toggle="dropdown" data-target="#">Github</a>
+						</li>
 					</ul>
 				</nav>
 
@@ -120,7 +147,7 @@
 
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+<script src="./js/min/bootstrap.min.js"></script>
 <!--<script src="https://raw.github.com/jkeyes/baseline/master/baseliner/baseliner.js"></script>
 <script>
 window.onload = function() {
