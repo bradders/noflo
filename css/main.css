@@ -15,6 +15,7 @@
  * Content
  * Code Samples
  * Library
+ * Demos
 
  */
 /*------------------------------------*\
@@ -252,8 +253,16 @@ h3, .h3 {
   font-size: 1em;
   line-height: 1.4; }
 
+h4, .h4 {
+  font-size: 1em;
+  font-weight: normal; }
+
 p {
   margin: 0 0 15px 0;
+  line-height: 1.5; }
+
+li {
+  list-style-position: inside;
   line-height: 1.5; }
 
 a {
@@ -261,6 +270,9 @@ a {
   a:hover {
     color: #8bb6e4;
     text-decoration: underline; }
+
+hr {
+  margin-bottom: 15px; }
 
 /*------------------------------------*\
     $Page Title
@@ -450,3 +462,11 @@ code {
 .avatar {
   margin-right: 15px;
   border-radius: 23px; }
+
+/*------------------------------------*\
+    $Demos
+\*------------------------------------*/
+.demo__screenshot > img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: -2px 2px 2px #ddd; }

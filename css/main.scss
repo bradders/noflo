@@ -15,6 +15,7 @@
  * Content
  * Code Samples
  * Library
+ * Demos
 
  */
 
@@ -122,6 +123,13 @@ $ProximaLightStack: "proxima-nova-light", Arial, sans-serif;
         clear: both;
     }
 
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
 }
 
 
@@ -280,7 +288,7 @@ $ProximaLightStack: "proxima-nova-light", Arial, sans-serif;
 \*------------------------------------*/
 .dropdown-menu {
 	left: -50%;
-	border-radius: 4px;
+	@include border-radius;
 	border-top: 4px solid $blue;
 
 	&:before {
@@ -403,11 +411,17 @@ h3, .h3 {
 }
 
 h4, .h4 {
-	
+	font-size: 1em;
+	font-weight: normal;
 }
 
 p {
 	margin: 0 0 15px 0;
+	line-height: 1.5;
+}
+
+li {
+	list-style-position: inside;
 	line-height: 1.5;
 }
 
@@ -419,6 +433,10 @@ a {
 		text-decoration: underline;
 	}
 
+}
+
+hr {
+	margin-bottom: 15px;
 }
 
 
@@ -559,7 +577,7 @@ pre {
 	font-size: $fourteen;
 	font-family: "Myriad Pro", Aperture, Arial, sans-serif;
 	line-height: 1;
-	border-radius: 4px 4px 4px;
+	@include border-radius;
 	background-color: hsl(240, 3.6%, 11.6%);
 	background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(.5, hsl(240, 3.1%, 12.6%)), color-stop(.5, transparent), to(transparent));
 	background-image: -moz-linear-gradient(hsl(240, 3.1%, 12.6%) 50%, transparent 50%, transparent);
@@ -585,7 +603,7 @@ code {
 	width: 100%;
 	padding: 15px;
 	margin-bottom: 15px;
-	border-radius: 4px;
+	@include border-radius;
 	border: 1px solid #c0c0c0;
 	box-shadow: 1px 1px 2px #ddd;
 }
@@ -690,11 +708,33 @@ code {
 		}
 	}
 
+.overview-extras {
+
+	@include breakpoint(small) {
+
+	}
+
+}
+
 .avatar {
 	margin-right: 15px;
-	border-radius: 23px;
+	@include border-radius(23px);
 }
 
 
 
+
+
+/*------------------------------------*\
+    $Demos
+\*------------------------------------*/
+.demo__screenshot {
+
+	> img {
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		box-shadow: -2px 2px 2px #ddd;
+	}
+
+}
 

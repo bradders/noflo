@@ -77,7 +77,7 @@
 			
 			<div class="container">
 				<h1 class="page-title__title">Documentation</h1>
-				<a href="./" class="btn btn-primary page-title__button download-button">Download on GitHub</a>
+				<a href="./" class="btn btn-primary page-title__button download-button">On GitHub</a>
 			</div>
 
 		</div>
@@ -123,7 +123,7 @@
 					<p>NoFlo is available <a href="./">via NPM</a>, so you can install it with:</p>
 					<pre><code>$ npm install -g noflo</code></pre>
 
-					<h2>Installing from Git</h3>
+					<h3>Installing from Git</h3>
 					<p>NoFlo requires a reasonably recent version of <a href="./">Node.js</a>, and some 
 						<a href="./">npm</a> packages. Ensure you have the grunt-cli package installed (grunt command should be available on command line) and NoFlo checked out from Git. Build NoFlo with:</p>
 					<pre><code>$ grunt build</code></pre>
@@ -132,6 +132,47 @@
 
 					<p>Then you can install everything needed by a simple:</p>
 					<pre><code>$ npm link</code></pre>
+
+					<p>NoFlo is available from <a href="./">GitHub</a> under the MIT licence.</p>
+
+					<hr />
+
+					<h2>Changes</h2>
+					<p>Please refer to the <a href="./">CHANGES.md document</a>.</p>
+
+					<hr />
+
+					<h2>Using NoFlo</h2>
+					<p>There are two ways to use NoFlo:</p>
+
+					<ul>
+ 						<li><strong>Independent:</strong> Building the whole control logic of your software as a 
+ 							NoFlo graph, and running it with the noflo tool</li>
+						<li><strong>Embedded:</strong> Using NoFlo as a library and calling some NoFlo graphs whenever 
+							your software needs workflows</li>
+					</ul>
+
+					<p>When you create a NoFlo graph, it doesn't do anything by itself. It only loads the 
+						components of the graph and sets up the connections between them. Then it is up to 
+						the components to actually start sending messages to their outports, or reacting to 
+						messages they receive on their inports.</p>
+
+					<p>Since most components require some input before they act, the usual way to make a NoFlo 
+						graph run is to send it some initial information packets, or IIPs. Examples of this 
+						would include sending a port number that a web server could listen to the web 
+						server component, or sending a file name to a file reader.</p>
+
+					<p>This activation model provides many possibilities:</p>
+
+					<ul>
+						<li>Starting the graph based on user interaction (shell command, clicking a button)</li>
+						<li>Starting the graph based on a received signal (Redis pub/sub, D-Bus signal, WebHook, 
+							email)</li>
+						<li>Starting the graph at a given time or interval (running a graph on the first of 
+							every month, or five minutes from now)</li>
+						<li>Starting the graph based on context (when arriving to a physical location, when user 
+							goes to a ...</li>
+					</ul>
 
 				</div>
 				<!-- /.content -->
