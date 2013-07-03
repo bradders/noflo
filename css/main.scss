@@ -125,7 +125,7 @@ $ProximaLightStack: "proxima-nova-light", Arial, sans-serif;
 
 }
 
-@mixin border-radius($radius) {
+@mixin border-radius($radius: 4px) {
 	-webkit-border-radius: $radius;
 	   -moz-border-radius: $radius;
 	    -ms-border-radius: $radius;
@@ -732,7 +732,7 @@ code {
 
 	> img {
 		border: 1px solid #ddd;
-		border-radius: 4px;
+		@include border-radius;
 		box-shadow: -2px 2px 2px #ddd;
 	}
 
